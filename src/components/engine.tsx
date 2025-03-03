@@ -160,30 +160,6 @@ export default function PlayRandomMoveEngine() {
         promotionToSquare={moveTo}
         showPromotionDialog={showPromotionDialog}
       />
-      <button
-        onClick={() => {
-          safeGameMutate((game) => {
-            game.reset();
-          });
-          setMoveSquares({});
-          setOptionSquares({});
-          setRightClickedSquares({});
-        }}
-      >
-        reset
-      </button>
-      <button
-        onClick={() => {
-          safeGameMutate((game) => {
-            game.undo();
-          });
-          setMoveSquares({});
-          setOptionSquares({});
-          setRightClickedSquares({});
-        }}
-      >
-        undo
-      </button>
     </div>
   );
 }
